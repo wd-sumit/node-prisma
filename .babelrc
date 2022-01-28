@@ -1,0 +1,38 @@
+{
+  "presets": ["@babel/preset-env"],
+  "comments": true,
+  "plugins": [
+    [
+      "@babel/transform-runtime",
+      {
+        "absoluteRuntime": false,
+        "corejs": false,
+        "helpers": true,
+        "regenerator": true,
+        "useESModules": false
+      }
+    ],
+    [
+      "module-resolver",
+      {
+        "root": ["./src"],
+        "alias": {
+          "@config": "./src/config",
+          "@database": "./src/database",
+          "@functions": "./src/functions",
+          "@graphql": "./src/graphql",
+          "@helpers": "./src/helpers",
+          "@middlewares": "./src/middlewares",
+          "@models": "./src/models",
+          "@routes": "./src/routes",
+          "@services": "./src/services",
+          "@open-api": "./src/openApi",
+          "@templates": "./src/templates",
+          "@constants": "./src/constants",
+          "@exceptions": "./src/exceptions",
+          "@src": "./src"
+        }
+      }
+    ]
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "name": "prisma-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "prisma": {
+    "schema": "src/database/schema.prisma"
+  },
+  "scripts": {
+    "clean": "rm -rf dist",
+    "build": "npm run clean && babel src -s -d dist",
+    "start:prod": "babel-node -r ./config.js ./dist/bin/www.js",
+    "start:dev": "nodemon -r ./config.js --exec babel-node src/bin/index.js",
+    "start": "npm run build && npm run start:prod"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.14.8",
+    "@babel/core": "^7.15.0",
+    "@babel/node": "^7.14.9",
+    "@babel/plugin-transform-runtime": "^7.15.0",
+    "@babel/preset-env": "^7.15.0",
+    "@prisma/client": "^3.8.1",
+    "babel-plugin-module-resolver": "^4.1.0",
+    "babel-polyfill": "^6.26.0",
+    "csv-parser": "^3.0.0",
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.24.0",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^3.4.0",
+    "eslint-plugin-react": "^7.24.0",
+    "nodemon": "^2.0.12",
+    "prisma": "^3.8.1"
+  },
+  "dependencies": {
+    "dotenv-extended": "^2.9.0",
+    "express": "^4.17.1"
+  },
+  "engines": {
+    "node": ">=12.19.1"
+  }
+}

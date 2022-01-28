@@ -1,0 +1,56 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "target": "esnext",
+    "module": "commonjs",
+    "paths": {
+      "@config/*": [
+        "src/config/*"
+      ],
+      "@database/*": [
+        "src/database/*"
+      ],
+      "@functions/*": [
+        "src/functions/*"
+      ],
+      "@graphql": [
+        "src/graphql/*"
+      ],
+      "@helpers/*": [
+        "src/helpers/*"
+      ],
+      "@middlewares/*": [
+        "src/middlewares/*"
+      ],
+      "@models/*": [
+        "src/models/*"
+      ],
+      "@routes/*": [
+        "src/routes/*"
+      ],
+      "@services/*": [
+        "src/services/*"
+      ],
+      "@open-api/*": [
+        "src/openApi/*"
+      ],
+      "@templates/*": [
+        "src/templates/*"
+      ], 
+      "@constants/*": [
+        "src/constants/*"
+      ],
+      "@exceptions/*": [
+        "src/exceptions/*"
+      ],
+      "@src/*": [
+        "src/*"
+      ]
+    }
+  },
+  "exclude": [
+    "node_modules",
+    "**/node_modules/*",
+    "dist"
+  ]
+}
